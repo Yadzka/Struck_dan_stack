@@ -12,15 +12,22 @@ struct mahasiswa
 int main(int argc, char const *argv[])
 {
     mahasiswa yadzka;
-    yadzka.nim = "C030324096";
-    yadzka.nama = "Muhammad Yadzka";
-    yadzka.alamat = "Jl. Gerilya";
-    yadzka.ipk = 4;
+    mahasiswa *ptryadzka = &yadzka;
 
+    cout << "Isikan Data Anda: \n";
+    cout << "NIM : ";
+    cin >> ptryadzka->nim;
+    cout << "Nama : ";
+    cin >> ptryadzka->nama;
+    cout << "Alamat : ";
+    cin >> ptryadzka->alamat;
+    cout << "IPK : ";
+    cin >> ptryadzka->ipk;
+    system("cls");
     cout << "Data Anda: \n";
-    cout << "NIM: " << yadzka.nim << "\n";
-    cout << "Nama: " << yadzka.nama << "\n";
-    cout << "Alamat: " << yadzka.alamat << "\n";
-    cout << "IPK: " << yadzka.ipk << "\n";
+    cout << "NIM = " << ptryadzka->nim << "\n";
+    cout << "Nama = " << ptryadzka->nama << "\n";
+    cout << "Alamat = " << ptryadzka->alamat << "\n";
+    cout << "IPK = " << ptryadzka->ipk << "\n";
     return 0;
 }
