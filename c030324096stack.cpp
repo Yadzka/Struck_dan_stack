@@ -34,3 +34,8 @@ int Full(stack *M)
 {
     return (M->Count == MAXSTACK);
 }
+
+int empty(stack *M)
+{
+    return (M->Count == 0);
+}
