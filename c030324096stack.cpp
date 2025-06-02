@@ -6,7 +6,7 @@ typedef int itemType;
 
 const int MAXSTACK = 10;
 
-typedef struct stack
+typedef struct Stack
 {
     itemType Item[MAXSTACK];
     int Count;
@@ -31,17 +31,17 @@ void initStack(Stack *M)
     M->Count = 0;
 }
 
-int Full(stack *M)
+int Full(Stack *M)
 {
     return (M->Count == MAXSTACK);
 }
 
-int empty(stack *M)
+int empty(Stack *M)
 {
     return (M->Count == 0);
 }
 
-void pop(stack *M, itemType *Y)
+void pop(Stack *M, itemType *Y)
 {
     if (empty(M))
     {
@@ -54,7 +54,7 @@ void pop(stack *M, itemType *Y)
     }
 }
 
-void push(stack *M, itemType y)
+void push(Stack *M, itemType y)
 {
     if (Full(M))
     {
