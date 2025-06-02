@@ -21,7 +21,18 @@ void display(Stack *M);
 
 int main(int argc, char const *argv[])
 {
-    cout << "Hello World!" << endl;
+    Stack M;
+    itemType y;
+
+    initStack(&M);
+
+    push(&M, 3);
+    push(&M, 7);
+    push(&M, 4);
+    push(&M, 2);
+    push(&M, 9);
+    pop(&M, &y);
+    display(&M);
 
     return 0;
 }
@@ -41,7 +52,7 @@ int empty(Stack *M)
     return (M->Count == 0);
 }
 
-void pop(Stack *M, itemType *Y)
+void pop(Stack *M, itemType *y)
 {
     if (empty(M))
     {
@@ -50,7 +61,7 @@ void pop(Stack *M, itemType *Y)
     else
     {
         --(M->Count);
-        *Y = M->Item[M->Count];
+        *y = M->Item[M->Count];
     }
 }
 
