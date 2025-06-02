@@ -66,3 +66,13 @@ void push(Stack *M, itemType y)
         ++(M->Count);
     }
 }
+
+void display(Stack *M)
+{
+    cout << "Menampilkan Data Stack" << endl;
+
+    for (int i = (M->Count) - 1; i >= 0; --i)
+    {
+        cout << M->Item[i] << endl;
+    }
+}
