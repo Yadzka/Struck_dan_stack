@@ -12,6 +12,12 @@ typedef struct stack
     int Count;
 } Stack;
 
+void initStack(Stack *M);
+int Full(stack *M);
+int empty(stack *M);
+void pop(stack *M, itemType *Y);
+void push(stack *M, itemType *Y);
+
 int main(int argc, char const *argv[])
 {
     cout << "Hello World!" << endl;
