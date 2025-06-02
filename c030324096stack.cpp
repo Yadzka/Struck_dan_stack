@@ -13,10 +13,11 @@ typedef struct stack
 } Stack;
 
 void initStack(Stack *M);
-int Full(stack *M);
-int empty(stack *M);
-void pop(stack *M, itemType *y);
-void push(stack *M, itemType y);
+int Full(Stack *M);
+int empty(Stack *M);
+void pop(Stack *M, itemType *y);
+void push(Stack *M, itemType y);
+void display(Stack *M);
 
 int main(int argc, char const *argv[])
 {
