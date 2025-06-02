@@ -39,3 +39,12 @@ int empty(stack *M)
 {
     return (M->Count == 0);
 }
+
+void pop(stack *M, itemType *Y){
+    if (empty(M)){
+        cout << "Stack Masih Kosong" << endl;
+    } else {
+        --(M->Count);
+        *Y = M->Item[M->Count];
+    }
+}
