@@ -15,8 +15,8 @@ typedef struct stack
 void initStack(Stack *M);
 int Full(stack *M);
 int empty(stack *M);
-void pop(stack *M, itemType *Y);
-void push(stack *M, itemType *Y);
+void pop(stack *M, itemType *y);
+void push(stack *M, itemType y);
 
 int main(int argc, char const *argv[])
 {
@@ -40,11 +40,28 @@ int empty(stack *M)
     return (M->Count == 0);
 }
 
-void pop(stack *M, itemType *Y){
-    if (empty(M)){
+void pop(stack *M, itemType *Y)
+{
+    if (empty(M))
+    {
         cout << "Stack Masih Kosong" << endl;
-    } else {
+    }
+    else
+    {
         --(M->Count);
         *Y = M->Item[M->Count];
+    }
+}
+
+void push(stack *M, itemType y)
+{
+    if (Full(M))
+    {
+        cout << "Stack Sudah Penuh" << endl;
+    }
+    else
+    {
+        M->Item[M->Count] = y;
+        ++(M->Count);
     }
 }
