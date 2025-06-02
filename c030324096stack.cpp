@@ -29,3 +29,8 @@ void initStack(Stack *M)
 {
     M->Count = 0;
 }
+
+int Full(stack *M)
+{
+    return (M->Count == MAXSTACK);
+}
